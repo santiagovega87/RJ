@@ -14,6 +14,7 @@ function Nav() {
                         <Navitem text='Insumos' url='https://www.google.com'/>
                         <Navitem text='Tonicas' url='https://www.google.com'/>
                         <Navitem text='Cocteleria' url='https://www.google.com'/>
+                        <Navitem text='CART' url='https://www.google.com'/>
                     </ul>
                 </nav>
             </div>

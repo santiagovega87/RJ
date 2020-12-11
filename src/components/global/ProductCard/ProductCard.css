@@ -1,0 +1,13 @@
+article {
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+article h3 {
+    font-size: 1.5rem;
+}
+
+article p {
+    font-size: 1.5rem;
+}
