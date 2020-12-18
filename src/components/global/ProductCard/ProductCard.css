@@ -11,3 +11,25 @@ article h3 {
 article p {
     font-size: 1.5rem;
 }
+
+.qty {
+    margin: 10px 0;
+}
+
+.qty button {
+    width: 30px;
+    height: 30px;
+    
+}
+
+
+.qty input {
+    height: 30px;
+    width: 50%;
+    text-align: center;
+}
+
+article .btnChartSummit {
+    width: 100%;
+    height: 30px;
+}

@@ -14,7 +14,7 @@ function Nav() {
                         <Navitem text='Insumos' url='https://www.google.com'/>
                         <Navitem text='Tonicas' url='https://www.google.com'/>
                         <Navitem text='Cocteleria' url='https://www.google.com'/>
-                        <Navitem text='CART' url='https://www.google.com'/>
+                        {/* <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> */}
                     </ul>
                 </nav>
             </div>
