@@ -12,41 +12,57 @@ const FeatureProducts = () => {
             id: 1,
             titulo: 'Buenos Aires',
             precio: 1600,
+            descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            img: '',
         },
         {
             id: 2,
             titulo: 'Retinga',
             precio: 1450,
+            descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            img: '',
         },
         {
             id: 3,
             titulo: 'SUR',
             precio: 1300,
+            descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            img: '',
         },
         {
             id: 4,
             titulo: 'El Alquimista',
             precio: 1400,
+            descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            img: '',
         },
         {
             id: 5,
             titulo: 'HILBING',
             precio: 1000,
+            descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            img: '',
         },
         {
             id: 6,
             titulo: 'Apostoles 950',
             precio: 1600,
+            descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            img: '',
         },
         {
             id: 7,
             titulo: 'Heraclito & Macedonio',
             precio: 1200,
+            descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            img: '',
         },
         {
             id: 8,
             titulo: 'COMUNAL',
             precio: 1400,
+            descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            img: '',
         },
     ]
 
@@ -63,23 +79,23 @@ const FeatureProducts = () => {
     }, [])
 
     // Prueba en consola
-    useEffect(() => {
-        console.log(items)
-    }, [items])
+    // useEffect(() => {
+    //     console.log(items)
+    // }, [items])
 
     // MAPEO DE LOS ITEMS -- parecido a un "for"
     // Prueba en consola
-    useEffect(() => {
-        items.map(items => console.log(items))
-    }, [items])
+    // useEffect(() => {
+    //     items.map(items => console.log(items))
+    // }, [items])
     
     return(
         <section>
 
             {/*Prueba de cargando*/}
-            {
+            {/* {
                 items.length ? <p>OK</p> : <p>cargando</p>
-            }
+            } */}
             {
                 items.map(items => 
                     <ProductCard titulo={items.titulo} precio={items.precio}/>

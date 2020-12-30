@@ -1,5 +1,6 @@
 import './ProductCard.css'
 import {useState} from 'react'
+import {Link, NavLink} from 'react-router-dom'
 
 const ProductCard = ({titulo, precio}) => {
     const[qty, setearQty] = useState(1);
@@ -22,7 +23,7 @@ const ProductCard = ({titulo, precio}) => {
 
     return (
         <article>
-            <img src="https://placehold.it/150x250" alt=""/>
+            <img src='https://placehold.it/150x250' alt="Imagen descriptiva del producto"/>
             <h3>{titulo}</h3>
             <p>{precio}</p>
             <div className="qty">
@@ -38,6 +39,7 @@ const ProductCard = ({titulo, precio}) => {
             <button className='btnChartSummit'
                 onClick={add}
             >AGREGAR</button>
+            <Link className='detail' to='/detail'>Ver mas</Link>
         </article>
     )
 }
