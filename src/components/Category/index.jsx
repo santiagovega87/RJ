@@ -7,6 +7,8 @@ const Category = () => {
     useEffect(() => {
         console.log(name)
     }, [name])
+
+    
     
     return (
         <>

@@ -1,6 +1,7 @@
 import './Nav.css';
 import '../navitem/Navitem'
 import Navitem from '../navitem/Navitem';
+import {Link} from 'react-router-dom'
 
 function Nav({titulo, action}) {
 
@@ -25,12 +26,16 @@ function Nav({titulo, action}) {
             texto: 'Cocteleria',
             ruta: '/category/cocteleria',
         },
+        {
+            texto: 'CART',
+            ruta: '/category/cart',
+        },
     ]
 
     return(
         <header>
             <div className="conteiner">
-                <h1>GINstore</h1>
+                <h1><Link to='/'>GINstore</Link></h1>
                 <nav>
                     <ul>
                         {
