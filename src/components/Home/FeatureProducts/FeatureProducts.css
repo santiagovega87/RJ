@@ -1,4 +1,4 @@
-section {
+ul {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -7,3 +7,4 @@ section {
     margin-bottom: 50px;
     max-width: 1000px;
 }
+

@@ -2,7 +2,7 @@ import './ProductCard.css'
 import {useState} from 'react'
 import {Link, NavLink} from 'react-router-dom'
 
-const ProductCard = ({titulo, precio}) => {
+const ProductCard = ({titulo, precio, id}) => {
     const[qty, setearQty] = useState(1);
 
     const clickResta = () => {
@@ -39,7 +39,7 @@ const ProductCard = ({titulo, precio}) => {
             <button className='btnChartSummit'
                 onClick={add}
             >AGREGAR</button>
-            <Link className='detail' to='/detail'>Ver mas</Link>
+            <Link className='detail' to={`/detail/${id}`}>Ver mas</Link>
         </article>
     )
 }

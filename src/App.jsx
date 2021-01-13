@@ -9,8 +9,9 @@ import FeatureProducts from './components/Home/FeatureProducts/FeatureProducts'
 import Detail from './components/Details/ConteinerDetail'
 import { BrowserRouter, Switch, Route, Link} from 'react-router-dom'
 import Error404 from './components/global/Error404/Error404'
-import category from './components/Category/index'
 import Category from './components/Category/index';
+import Cart from './components/Cart/index'
+import Checkout from './components/Checkout/index'
 
 
 function App() {
@@ -45,10 +46,16 @@ function App() {
         <Route exact path='/'>
           <FeatureProducts/>
         </Route>
-        <Route path='/detail'>
+        <Route exact path='/category/cart'>
+          <Cart/>
+        </Route>
+        <Route  path='/checkout'>
+          <Checkout/>
+        </Route>
+        <Route path='/detail/:id?'>
           <Detail/>
         </Route>
-        <Route path='/category:name?'>
+        <Route path="/category/:name">
           <Category/>
         </Route>
         <Route path='*'>

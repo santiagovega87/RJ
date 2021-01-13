@@ -1,7 +1,9 @@
 import {useEffect, useState} from 'react'
 import ProductDetail from './Detail'
+import {useParams} from 'react-router-dom'
 
 const Detail = () => {
+    const {id} = useParams()
     const [product, setProduct] = useState(null);
 
     const getProduct = new Promise((resolve, reject) => {
@@ -28,6 +30,7 @@ const Detail = () => {
                 product ?
                 <div className="conteinerDetail">
                     <ProductDetail item={product} />
+                    <p>{id}</p>
                 </div> :
                 <p>CARGANDO</p>
             }

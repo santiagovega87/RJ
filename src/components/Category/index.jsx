@@ -1,14 +1,15 @@
 import {useParams} from 'react-router-dom'
 import {useEffect} from 'react'
+import {productos} from '../../Productos'
 
 const Category = () => {
-    const {name} = useParams()
+    let {name} = useParams()
 
     useEffect(() => {
+
         console.log(name)
     }, [name])
 
-    
     
     return (
         <>
