@@ -1,11 +1,22 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import {Link, NavLink} from 'react-router-dom'
+import {Store} from '../../store/index'
 
 
 const ProductDetail = ({item}) => {
+
+    const [data, setData] = useContext(Store)
+
     const handleClickAdd = (e) => {
-        console.log(e)
-        alert('Producto agregado al carrito')
+        // console.log(e)
+        
+        setData({
+            ...data,
+            cantidad: data.cantidad + qty,
+            items: [...data.items, item],
+        })
+        alert(`Producto agregado al carrito ${qty}`)
+        console.log(data)
     }
 
     const[qty, setearQty] = useState(1);

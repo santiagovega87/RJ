@@ -203,10 +203,12 @@ const products = [
     },
     {
         id: 25,
-        titulo: 'JCOCTELERA',
+        titulo: 'JIGGER',
         precio: 140,
         descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
         img: '',
         category: 'cocteleria',
     },
 ]
+
+export default products

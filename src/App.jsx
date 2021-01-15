@@ -1,7 +1,4 @@
-import {useState, useEffect} from 'react'
-
-
-
+import {useState} from 'react'
 import './reset.css';
 import Nav from './components/global/Nav/Nav'
 import Modal from './components/global/Modal/Modal'
@@ -12,6 +9,7 @@ import Error404 from './components/global/Error404/Error404'
 import Category from './components/Category/index';
 import Cart from './components/Cart/index'
 import Checkout from './components/Checkout/index'
+import {Store} from './store'
 
 
 function App() {
@@ -39,45 +37,49 @@ function App() {
   //   }
   // }
 
-  return (
-    <BrowserRouter>
-      <Nav />
-      <Switch>
-        <Route exact path='/'>
-          <FeatureProducts/>
-        </Route>
-        <Route exact path='/category/cart'>
-          <Cart/>
-        </Route>
-        <Route  path='/checkout'>
-          <Checkout/>
-        </Route>
-        <Route path='/detail/:id?'>
-          <Detail/>
-        </Route>
-        <Route path="/category/:name">
-          <Category/>
-        </Route>
-        <Route path='*'>
-          <Error404/>
-        </Route>
-      </Switch>
- 
+  const [data, setData] = useState({
+    items: [],
+    cantidad: 0
+  })
 
- 
-    
-    
-    
-    {/* <ProductCard>{nombre}</ProductCard> */}
-    {/* <button onClick={() => setNombre('Santiago')}>Cambiar el Nombre</button> */}
-    {/* <input type="text" value={nombre} onChange={ActName}/>
-    <a href="#modal">Abrir Modal</a>
-    <Modal>
-      <h2>Bienvenidos</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum tenetur adipisci dignissimos cum architecto recusandae quasi modi voluptate, non dolore dicta. Ad blanditiis repellendus labore sapiente dolores fugit sint autem.</p>
-    </Modal> */}
-    {/* <FeatureProducts/> */}
-    </BrowserRouter>
+  return (
+    <Store.Provider value={[data, setData]}>
+      <BrowserRouter>
+        <Nav />
+        <Switch>
+          <Route exact path='/'>
+            <FeatureProducts/>
+          </Route>
+          <Route exact path='/category/cart'>
+            <Cart/>
+          </Route>
+          <Route  path='/checkout'>
+            <Checkout/>
+          </Route>
+          <Route path='/detail/:id?'>
+            <Detail/>
+          </Route>
+          <Route path="/category/:name">
+            <Category/>
+          </Route>
+          <Route path='*'>
+            <Error404/>
+          </Route>
+        </Switch>
+        
+
+      
+      {/* <ProductCard>{nombre}</ProductCard> */}
+      {/* <button onClick={() => setNombre('Santiago')}>Cambiar el Nombre</button> */}
+      {/* <input type="text" value={nombre} onChange={ActName}/>
+      <a href="#modal">Abrir Modal</a>
+      <Modal>
+        <h2>Bienvenidos</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum tenetur adipisci dignissimos cum architecto recusandae quasi modi voluptate, non dolore dicta. Ad blanditiis repellendus labore sapiente dolores fugit sint autem.</p>
+      </Modal> */}
+      {/* <FeatureProducts/> */}
+      </BrowserRouter>
+    </Store.Provider>
   );
 }
 

@@ -1,6 +1,6 @@
 import './ProductCard.css'
 import {useState} from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const ProductCard = ({titulo, precio, id}) => {
     const[qty, setearQty] = useState(1);
@@ -28,7 +28,7 @@ const ProductCard = ({titulo, precio, id}) => {
             <p>{precio}</p>
             <div className="qty">
                 <button
-                    disabled={qty == 1 ? 'disable' : null}
+                    disabled={qty === 1 ? 'disable' : null}
                     onClick={clickResta}
                 >-</button>
                 <input type="number" value={qty} readOnly/>

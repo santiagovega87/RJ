@@ -1,20 +1,37 @@
 import {useParams} from 'react-router-dom'
-import {useEffect} from 'react'
-import {productos} from '../../Productos'
+import {useEffect, useState} from 'react'
+import products from '../../Productos'
+import productList from '../Category/ProductsList/ProductsList'
+
 
 const Category = () => {
-    let {name} = useParams()
+    const {name} = useParams()
+    const [prods, setProds] = useState([])
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     console.log(name)        
+    // }, [name])
 
-        console.log(name)
+    useEffect(()=>{
+        if(name) {
+            setProds(products.filter(prod => prod.category === name))
+            console.log(prods)
+        }
     }, [name])
 
     
     return (
         <>
             <h1>{name}</h1>
-            <p>Pruebas</p>
+            {/* <p>Pruebas</p> */}
+            {
+                prods.map(item =>
+                    <p>
+                        {item.titulo}
+                    </p>)
+            }
+            
+            <productList products={prods}/>
         </>
     )
 }
