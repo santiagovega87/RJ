@@ -13,7 +13,7 @@ const ProductDetail = ({item}) => {
         setData({
             ...data,
             cantidad: data.cantidad + qty,
-            items: [...data.items, item],
+            items: [...data.items, {item: item, cantidad:qty}],
         })
         alert(`Producto agregado al carrito ${qty}`)
         console.log(data)
@@ -39,7 +39,7 @@ const ProductDetail = ({item}) => {
 
     return (
         <article>
-            <h1>{item.nombre}</h1>
+            <h1>{item.titulo}</h1>
             <img src={item.img} alt="Imagen Descriptiva"/>
             <p>{item.descripcion}</p>
             <p>{item.precio}</p>

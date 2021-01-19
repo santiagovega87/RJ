@@ -2,9 +2,11 @@
 import ProductCard from  '../../global/ProductCard/ProductCard'
 import './FeatureProducts.css'
 import {useEffect, useState} from 'react'
+import {getFirestore} from '../../../db/index'
 
 const FeatureProducts = () => {
     const [items, setItems] = useState([])
+    const db = getFirestore()
 
     //LISTADO DE PRODUCTOS 
     const porducts = [
@@ -66,6 +68,17 @@ const FeatureProducts = () => {
         },
     ]
 
+    const getProductsFromDb = () => {
+        db.collection('productos').get()
+        .then(data => {
+            console.log(data)
+        })
+        .catch(e => console.log(e))
+    }
+
+    useEffect(() => {
+        getProductsFromDb();
+    }, [])
 
     //PROMESA setTime 1s
     const getProducts = new Promise((resolve, reject) => {
@@ -104,6 +117,7 @@ const FeatureProducts = () => {
                             id={items.id}
                             titulo={items.titulo} 
                             precio={items.precio}
+                            img={items.img}
                             />
                         </li>
                         )

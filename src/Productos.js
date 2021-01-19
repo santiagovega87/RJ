@@ -6,7 +6,7 @@ const products = [
         titulo: 'Buenos Aires',
         precio: 1600,
         descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        img: '',
+        img: 'https://placehold.it/150x250',
         category: 'destilados',
     },
     {

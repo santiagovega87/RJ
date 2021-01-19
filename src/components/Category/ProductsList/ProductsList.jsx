@@ -1,7 +1,7 @@
 import ProductCard from '../../global/ProductCard/ProductCard'
 import {useEffect, useState} from 'react'
 
-const productList = ({products}) => {
+const ProductList = ({products}) => {
 
 
     return(
@@ -11,11 +11,12 @@ const productList = ({products}) => {
                     {
                         products.map(item => 
                         <li key={item.id}>
-                            <p>{item.titulo}</p>
+                            {/* <p>{item.titulo}</p> */}
                             <ProductCard
-                            id={item.data.id}
-                            titulo={item.data.titulo} 
-                            precio={item.data.precio}
+                            id={item.id}
+                            titulo={item.titulo} 
+                            precio={item.precio}
+                            img={item.img}
                             />
                         </li>
                         )
@@ -26,5 +27,5 @@ const productList = ({products}) => {
     )
 }
 
-export default productList
+export default ProductList
 

@@ -1,7 +1,7 @@
 import {useParams} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import products from '../../Productos'
-import productList from '../Category/ProductsList/ProductsList'
+import ProductList from '../Category/ProductsList/ProductsList'
 
 
 const Category = () => {
@@ -24,14 +24,14 @@ const Category = () => {
         <>
             <h1>{name}</h1>
             {/* <p>Pruebas</p> */}
-            {
+            {/* {
                 prods.map(item =>
                     <p>
                         {item.titulo}
                     </p>)
-            }
+            } */}
             
-            <productList products={prods}/>
+            <ProductList products={prods}/>
         </>
     )
 }

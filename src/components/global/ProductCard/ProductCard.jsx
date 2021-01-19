@@ -26,7 +26,7 @@ const ProductCard = ({titulo, precio, id}) => {
             <img src='https://placehold.it/150x250' alt="Imagen descriptiva del producto"/>
             <h3>{titulo}</h3>
             <p>{precio}</p>
-            <div className="qty">
+            {/* <div className="qty">
                 <button
                     disabled={qty === 1 ? 'disable' : null}
                     onClick={clickResta}
@@ -38,7 +38,7 @@ const ProductCard = ({titulo, precio, id}) => {
             </div>
             <button className='btnChartSummit'
                 onClick={add}
-            >AGREGAR</button>
+            >AGREGAR</button> */}
             <Link className='detail' to={`/detail/${id}`}>Ver mas</Link>
         </article>
     )
