@@ -1,6 +1,7 @@
 import {useState, useContext} from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import {Store} from '../../store/index'
+import {useHistory} from 'react-router-dom'
 
 
 const ProductDetail = ({item}) => {
@@ -14,9 +15,11 @@ const ProductDetail = ({item}) => {
             ...data,
             cantidad: data.cantidad + qty,
             items: [...data.items, {item: item, cantidad:qty}],
+            precioTotal: data.precioTotal + (item.precio * qty)
         })
         alert(`Producto agregado al carrito ${qty}`)
         console.log(data)
+        // history.pushState('/cart')
     }
 
     const[qty, setearQty] = useState(1);
