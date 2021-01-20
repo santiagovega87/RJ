@@ -45,7 +45,7 @@ const ProductDetail = ({item}) => {
             <h1>{item.titulo}</h1>
             <img src={item.img} alt="Imagen Descriptiva"/>
             <p>{item.descripcion}</p>
-            <p>{item.precio}</p>
+            <p>$ {item.precio}</p>
             <div className="qty">
                 <button
                     disabled={qty == 1 ? 'disable' : null}

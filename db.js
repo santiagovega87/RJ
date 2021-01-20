@@ -1,6 +1,15 @@
-// Agragegar array de productos
+const firebase = require('firebase');
+require("firebase/firestore");
 
-const products = [
+firebase.initializeApp({
+    apiKey: "AIzaSyB1MGSvk_0v10-f7VwuWHVHkKGujuSsO18",
+    authDomain: "ginstore-fd560.firebaseapp.com",
+    projectId: "ginstore-fd560",
+});
+
+var db = firebase.firestore();
+
+var productos = [
     {
         id: 1,
         titulo: 'Buenos Aires',
@@ -237,4 +246,33 @@ const products = [
     },
 ]
 
-export default products
+// {
+//     "id": 35,
+//     "category": "juguetes",
+//     "title": "Peluche Petmate Puercoespin",
+//     "description": "",
+//     "img": "233023.webp",
+//     "size": "",
+//     "price": 1340,
+//     "outstanding": "",
+//     "discount": ""
+//   }
+
+productos.forEach((obj) => {
+  db.collection("productos")
+    .add({
+      id: obj.id,
+      titulo: obj.titulo,
+      pricio: obj.precio,
+      description: obj.descripcion,
+      img: obj.img,
+      category: obj.category, 
+      destacado: obj.destacado,
+    })
+    .then((docRef) => {
+      console.log("Producto registrado con ID: ", docRef.id);
+    })
+    .catch((error) => {
+      console.error("Error al agregar un documento: ", error);
+    });
+});
