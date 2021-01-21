@@ -25,7 +25,7 @@ const ProductCard = ({titulo, precio, id}) => {
         <article>
             <img src='https://placehold.it/150x250' alt="Imagen descriptiva del producto"/>
             <h3>{titulo}</h3>
-            <p>{precio}</p>
+            <p>$ {precio}</p>
             {/* <div className="qty">
                 <button
                     disabled={qty === 1 ? 'disable' : null}

@@ -2,6 +2,7 @@ import {useState, useContext} from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import {Store} from '../../store/index'
 import {useHistory} from 'react-router-dom'
+import './Detail.css'
 
 
 const ProductDetail = ({item}) => {

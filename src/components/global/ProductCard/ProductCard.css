@@ -1,10 +1,11 @@
 article {
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid rgb(225,225,225);
     margin: 10px;
+    background: white;
+    padding: 10px 5px;
+    border-radius: 10px;
 }
-
-
 
 article h3 {
     font-size: 1.5rem;
@@ -21,9 +22,7 @@ article p {
 .qty button {
     width: 30px;
     height: 30px;
-    
 }
-
 
 .qty input {
     height: 30px;
