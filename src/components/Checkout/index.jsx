@@ -72,7 +72,7 @@ const Checkout = () => {
                         <button>PAGAR</button>
                     </form> :
 
-                    <p>LA COMPRA SE TERMINO, NUM DE SEGUIMIENTO: {idCompra}</p>
+                    <p>LA COMPRA FINALIZO CORRECTAMENTE, N° DE SEGUIMIENTO: {idCompra}</p>
                 }
                 
             </div>
