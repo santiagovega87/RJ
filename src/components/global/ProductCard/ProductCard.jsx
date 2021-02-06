@@ -2,7 +2,7 @@ import './ProductCard.css'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
 
-const ProductCard = ({titulo, precio, id}) => {
+const ProductCard = ({titulo, precio, id, img}) => {
     const[qty, setearQty] = useState(1);
 
     const clickResta = () => {
@@ -23,7 +23,7 @@ const ProductCard = ({titulo, precio, id}) => {
 
     return (
         <article>
-            <img src='https://placehold.it/150x250' alt="Imagen descriptiva del producto"/>
+            <img src={`/img/${img}`} alt="Imagen descriptiva del producto"/>
             <h3>{titulo}</h3>
             <p>$ {precio}</p>
             {/* <div className="qty">

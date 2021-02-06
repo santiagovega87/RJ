@@ -1,6 +1,7 @@
 import ProductCard from '../../global/ProductCard/ProductCard'
 import {useEffect, useState} from 'react'
 
+
 const ProductList = ({products}) => {
 
 
@@ -14,9 +15,11 @@ const ProductList = ({products}) => {
                             {/* <p>{item.titulo}</p> */}
                             <ProductCard
                             id={item.id}
-                            titulo={item.titulo} 
-                            precio={item.precio}
-                            img={item.img}
+
+                            //Le saque el DATA
+                            titulo={item.data.titulo} 
+                            precio={item.data.pricio}
+                            img={item.data.img}
                             />
                         </li>
                         )

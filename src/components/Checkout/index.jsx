@@ -5,6 +5,8 @@ import {Store} from '../../store/index'
 const Checkout = () => {
     const [data, setData] = useContext(Store)
 
+    console.log(data)
+
     return(
         <section>
             <div>

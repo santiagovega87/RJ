@@ -73,7 +73,7 @@ const FeatureProducts = () => {
         .then(docs => {
             let arr = []
             docs.forEach(doc => {
-                    arr.push({id: doc.data.id, data: doc.data()})
+                    arr.push({id: doc.id, data: doc.data()})
                     console.log(doc.id)
                     console.log(doc.data())
                     }
@@ -123,7 +123,7 @@ const FeatureProducts = () => {
                         items.map((items) => 
                         <li key={items.id}>
                             <ProductCard
-                            id={items.data.id}
+                            id={items.id}
                             titulo={items.data.titulo} 
                             precio={items.data.pricio}
                             img={items.data.img}
