@@ -1,3 +1,57 @@
 /* article {
     background:rgb(225,225,225);
 } */
+
+.DetailConteiner {
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid rgb(225,225,225);
+    margin: 10px;
+    background: white;
+    padding: 10px 5px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+    
+}
+
+.Detail {
+    display: flex;
+}
+
+.DetailInfo {
+
+} 
+
+.DetailConteiner h3 {
+    font-size: 1.5rem;
+}
+
+.DetailConteiner p {
+    font-size: 1.5rem;
+}
+
+.DetailConteiner .qty {
+    margin: 10px 0;
+}
+
+.DetailConteiner .qty button {
+    width: 30px;
+    height: 30px;
+}
+
+.DetailConteiner .qty input {
+    height: 30px;
+    width: 50%;
+    text-align: center;
+}
+
+.DetailConteiner .btnChartSummit {
+    width: 100%;
+    height: 30px;
+}
+
+.DetailConteiner .detail {
+    font-size: 1.5rem;
+    color: blue;
+}

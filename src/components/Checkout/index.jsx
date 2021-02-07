@@ -2,6 +2,7 @@ import {useState ,useContext} from 'react'
 import {Store} from '../../store/index'
 import {app, getFirestore} from '../../db/index'
 import firebase from 'firebase/app'
+import './Checkout.css'
 
 
 
@@ -43,34 +44,45 @@ const Checkout = () => {
             completoVenta(true)
             console.log(id)
             setIdCompra(id)
+            handleClickClear()
         })
         .catch(e => console.log(e))
     }
 
     // console.log(formData)
 
+    const handleClickClear = () => {
+        setData({
+            cantidad: 0,
+            items: [],
+            precioTotal: 0,
+        })
+    }
+
     return(
-        <section>
-            <div>
+        <section className="checkout">
+            <div className="conteinerCheck">
                 <h1>Estas en el CHECKOUT</h1>
-                <p>Total de la compra: $ {data.precioTotal}</p>
 
                 {
                     !venta ? 
 
+                    <div className="ConteinerForm">
+                        <p>Total de la compra: $ {data.precioTotal}</p>
 
-                    <form onSubmit={handleSubmitForm}>
+                        <form onSubmit={handleSubmitForm}>
 
-                        <input type="text" value={formData.nombre} placeholder='Nombre' name='nombre'  onChange={handleChangeInput}/>
-                        <input type="text" placeholder='Apellido' name='apellido'value={formData.apellido} onChange={handleChangeInput}/>
-                        <input type="text" placeholder='E-Mail' name='email' value={formData.email} onChange={handleChangeInput}/>
-                        <input type="tel" placeholder='Cel' name='cel' value={formData.cel} onChange={handleChangeInput}/>
-                        <input type="number" placeholder='Credit-Cart' name='credit' value={formData.credit} onChange={handleChangeInput}/>
-                        <input type="text" placeholder='Fecha de vencimiento' name='vencimiento' value={formData.vencimiento} onChange={handleChangeInput}/>
-                        <input type="number" placeholder='Codigo de seguridad' name='code' value={formData.code} onChange={handleChangeInput}/>
+                            <input type="text" value={formData.nombre} placeholder='Nombre' name='nombre'  onChange={handleChangeInput}/>
+                            <input type="text" placeholder='Apellido' name='apellido'value={formData.apellido} onChange={handleChangeInput}/>
+                            <input type="text" placeholder='E-Mail' name='email' value={formData.email} onChange={handleChangeInput}/>
+                            <input type="tel" placeholder='Cel' name='cel' value={formData.cel} onChange={handleChangeInput}/>
+                            <input type="number" placeholder='Credit-Cart' name='credit' value={formData.credit} onChange={handleChangeInput}/>
+                            <input type="text" placeholder='Fecha de vencimiento' name='vencimiento' value={formData.vencimiento} onChange={handleChangeInput}/>
+                            <input type="number" placeholder='Codigo de seguridad' name='code' value={formData.code} onChange={handleChangeInput}/>
 
-                        <button>PAGAR</button>
-                    </form> :
+                            <button>PAGAR</button>
+                        </form>
+                    </div> :
 
                     <p>LA COMPRA FINALIZO CORRECTAMENTE, N° DE SEGUIMIENTO: {idCompra}</p>
                 }

@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react'
 import products from '../../Productos'
 import ProductList from '../Category/ProductsList/ProductsList'
 import {getFirestore} from '../../db/index'
+import './Products.css'
 
 const Category = () => {
     const {name} = useParams()
@@ -39,8 +40,9 @@ const Category = () => {
 
     
     return (
-        <>
-            <h1>{name}</h1>
+        
+        <section className='ProductsListConteiner'>
+            <h2>{name}</h2>
             {/* <p>Pruebas</p> */}
             {/* {
                 prods.map(item =>
@@ -50,7 +52,7 @@ const Category = () => {
             } */}
             
             <ProductList products={prods}/>
-        </>
+        </section>
     )
 }
 

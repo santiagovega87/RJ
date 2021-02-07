@@ -3,6 +3,7 @@ import ProductDetail from './Detail'
 import {useParams} from 'react-router-dom'
 import products from '../../Productos'
 import {getFirestore} from '../../db/index'
+import './Conteiner.css'
 
 const Detail = () => {
     const {id} = useParams()

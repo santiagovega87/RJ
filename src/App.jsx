@@ -10,6 +10,7 @@ import Category from './components/Category/index';
 import Cart from './components/Cart/index'
 import Checkout from './components/Checkout/index'
 import {Store} from './store'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -67,7 +68,9 @@ function App() {
             <Error404/>
           </Route>
         </Switch>
-        
+        <Footer/>
+
+    
 
       
       {/* <ProductCard>{nombre}</ProductCard> */}

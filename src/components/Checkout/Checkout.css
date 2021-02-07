@@ -1,0 +1,42 @@
+.checkout {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 15px;
+}
+
+.conteinerCheck {
+
+}
+
+.ConteinerForm {
+    width: 100%;
+    
+    
+}
+
+.ConteinerForm p {
+    margin: 10px 0px;
+    font-size: 2rem;
+    
+}
+
+.ConteinerForm input {
+    display: block;
+    width: 400px;
+    margin-top: 5px;
+}
+
+
+.ConteinerForm button{
+    margin: 20px 0px;
+    font-size: 1.7rem;
+    padding: 5px;
+    width: 150px;
+    border-radius: 20px;
+    border-bottom: 1px solid black;
+    color: blue;
+    background: white;
+
+}

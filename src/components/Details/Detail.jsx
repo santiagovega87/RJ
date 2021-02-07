@@ -71,25 +71,30 @@ const ProductDetail = ({item}) => {
     // }
 
     return (
-        <article>
+        <article className="DetailConteiner">
             <h1>{item.data.titulo}</h1>
-            <img src={`/img/${item.data.img}`} alt="Imagen Descriptiva"/>
-            <p>{item.data.description}</p>
-            <p>$ {item.data.pricio}</p>
-            <div className="qty">
-                <button
-                    disabled={qty == 1 ? 'disable' : null}
-                    onClick={clickResta}
-                >-</button>
-                <input type="number" value={qty} readOnly/>
-                <button
-                    onClick={clickSuma}
-                > +</button>
+            <div className="Detail">
+                <img src={`/img/${item.data.img}`} alt="Imagen Descriptiva"/>
+                <div className="DetailInfo">
+                    <p>{item.data.description}</p>
+                    <p>$ {item.data.pricio}</p>
+                    <div className="qty">
+                        <button
+                            disabled={qty == 1 ? 'disable' : null}
+                            onClick={clickResta}
+                        >-</button>
+                        <input type="number" value={qty} readOnly/>
+                        <button
+                            onClick={clickSuma}
+                        > +</button>
+                    </div>
+                    {/* <button className='btnChartSummit'
+                        onClick={add}
+                    >AGREGAR</button> */}
+                    <button onClick={handleClickAdd}>Agregar al carrito</button>
+                </div>
             </div>
-            {/* <button className='btnChartSummit'
-                onClick={add}
-            >AGREGAR</button> */}
-            <button onClick={handleClickAdd}>Agregar al carrito</button>
+
         </article>
     )
 }

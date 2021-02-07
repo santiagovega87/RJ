@@ -1,3 +1,6 @@
+import './error.css'
+
+
 const Error404 = () => {
     return (
         <div>

@@ -22,7 +22,7 @@ const ProductCard = ({titulo, precio, id, img}) => {
     }
 
     return (
-        <article>
+        <article className="ProductCart">
             <img src={`/img/${img}`} alt="Imagen descriptiva del producto"/>
             <h3>{titulo}</h3>
             <p>$ {precio}</p>

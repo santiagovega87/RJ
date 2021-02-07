@@ -1,6 +1,7 @@
 import {NavLink} from 'react-router-dom'
 import {Store} from './../../../store'
 import {useContext} from 'react'
+import './NavCart.css'
 
 const NavCart = ({action, url}) =>{
     // const [data] = useContext(Store)

@@ -1,0 +1,67 @@
+.cart {
+    margin-top: 20px auto;
+   
+    background: rgb(237,237,237);
+    padding: 10px 20px
+}
+
+
+
+.cart h1 {
+    text-align: center;
+    
+    
+}
+
+.cart p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+}
+
+.cart ul {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart ul li{
+    border: 1px solid rgb(225,225,225);
+    display: block;
+    width: 300px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: white;
+    margin: 5px;
+}
+
+.conteinerBtn{
+    text-align: center;
+    
+}
+
+.TotalPrice {
+    margin-top: 10px;
+    max-width: 1200px;
+}
+
+.TotalPrice p {
+    font-weight: bolder;
+}
+
+.btnClear {
+    margin-top: 10px;
+    
+}
+
+.btnFinish {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.7rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    color: blue;
+    background: white;
+    
+}
+

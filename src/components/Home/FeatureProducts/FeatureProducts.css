@@ -3,14 +3,12 @@ section{
     background: rgb(237,237,237);
 }
 
-
-ul {
+ ul {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 50px;
+    /* margin-top: 50px;
     margin-bottom: 50px;
-    max-width: 1000px;
+    max-width: 1000px; */
 }
-

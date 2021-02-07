@@ -36,7 +36,7 @@ function Nav({titulo, action}) {
     
 
     return(
-        <header>
+        <header className="headerNav"> 
             <div className="conteiner">
                 <h1><Link to='/'>GINstore</Link></h1>
                 <nav>
