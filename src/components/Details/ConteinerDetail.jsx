@@ -10,19 +10,7 @@ const Detail = () => {
     const [product, setProduct] = useState(null);
     const db = getFirestore()
 
-    // const getProduct = new Promise((resolve, reject) => {
-    //     // setTimeout(() => {
-    //     //     resolve({
-    //     //         id: 1,
-    //     //         titulo: 'Buenos Aires',
-    //     //         precio: 1600,
-    //     //         descripcion: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-    //     //         img: 'https://placehold.it/150x250',
-    //     //         })
-    //     // }, 1000);
-    //     const selctProducto = products.filter(item => item.id === parseInt(id))
-    //     resolve(selctProducto[0])
-    // })
+
 
     console.log(id)
 
@@ -35,9 +23,7 @@ const Detail = () => {
             console.log(product)
         })
 
-        // getProduct
-        // .then(response => setProduct(response))
-        // .catch(error => console.log(error))
+
     }, [])
 
     return (

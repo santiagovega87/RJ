@@ -11,9 +11,7 @@ const Category = () => {
 
     const db = getFirestore();
 
-    // useEffect(() => {
-    //     console.log(name)        
-    // }, [name])
+
 
     useEffect(()=>{
         if(name) {
@@ -29,8 +27,7 @@ const Category = () => {
                 console.log(arr)
             })
             
-            // setProds(products.filter(prod => prod.category === name))
-            // console.log(prods)
+
             
         }
         
@@ -43,13 +40,7 @@ const Category = () => {
         
         <section className='ProductsListConteiner'>
             <h2>{name}</h2>
-            {/* <p>Pruebas</p> */}
-            {/* {
-                prods.map(item =>
-                    <p>
-                        {item.titulo}
-                    </p>)
-            } */}
+
             
             <ProductList products={prods}/>
         </section>

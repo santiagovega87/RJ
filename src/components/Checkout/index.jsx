@@ -9,7 +9,7 @@ import './Checkout.css'
 const Checkout = () => {
     const db = getFirestore();
     const [data, setData] = useContext(Store);
-    // const [venta, completoVenta] = useState(false);
+
     const [venta, completoVenta] = useState(false)
 
     const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ const Checkout = () => {
         code: '',
     })
 
-    // console.log(data)
+
 
     const handleChangeInput = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value})
@@ -49,7 +49,7 @@ const Checkout = () => {
         .catch(e => console.log(e))
     }
 
-    // console.log(formData)
+
 
     const handleClickClear = () => {
         setData({

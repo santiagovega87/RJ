@@ -26,19 +26,7 @@ const ProductCard = ({titulo, precio, id, img}) => {
             <img src={`/img/${img}`} alt="Imagen descriptiva del producto"/>
             <h3>{titulo}</h3>
             <p>$ {precio}</p>
-            {/* <div className="qty">
-                <button
-                    disabled={qty === 1 ? 'disable' : null}
-                    onClick={clickResta}
-                >-</button>
-                <input type="number" value={qty} readOnly/>
-                <button
-                    onClick={clickSuma}
-                > +</button>
-            </div>
-            <button className='btnChartSummit'
-                onClick={add}
-            >AGREGAR</button> */}
+
             <Link className='detail' to={`/detail/${id}`}>Ver mas</Link>
         </article>
     )

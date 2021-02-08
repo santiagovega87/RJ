@@ -68,28 +68,7 @@ const ProductDetail = ({item}) => {
 
 
 
-        // console.log(data)
-        // history.pushState('/cart')
 
-        
-        // data.items.forEach(e => {
-        //     if(e.item.titulo === item.titulo){
-
-        //         alert('Ya esta en el carrito')
-        //     } else {
-        //         setData({
-        //             ...data,
-        //             cantidad: data.cantidad + qty,
-        //             items: [...data.items, {item: item, cantidad:qty}],
-        //             precioTotal: data.precioTotal + (item.precio * qty)
-        //         })
-        //         alert(`Producto agregado al carrito ${qty}`)
-        //         console.log(data)
-        //         console.log('No esta en el carrito')
-        //     }
-            
-        // });
-        // console.log(item.titulo)
     }
 
     const[qty, setearQty] = useState(1);
@@ -106,9 +85,7 @@ const ProductDetail = ({item}) => {
         }
     }
 
-    // const add = () => {
-    //     alert(`Agregaste ${qty} a tu carrito de compras`)
-    // }
+
 
     return (
         <article className="DetailConteiner">
@@ -128,9 +105,7 @@ const ProductDetail = ({item}) => {
                             onClick={clickSuma}
                         > +</button>
                     </div>
-                    {/* <button className='btnChartSummit'
-                        onClick={add}
-                    >AGREGAR</button> */}
+
                     <button className="btnAdd" onClick={handleClickAdd}>Agregar al carrito</button>
                 </div>
             </div>

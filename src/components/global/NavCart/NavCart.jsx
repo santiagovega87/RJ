@@ -4,9 +4,7 @@ import {useContext} from 'react'
 import './NavCart.css'
 
 const NavCart = ({action, url}) =>{
-    // const [data] = useContext(Store)
 
-    // console.log(data)
 
     const [data, setData] = useContext(Store)
 
