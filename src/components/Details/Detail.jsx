@@ -18,7 +18,44 @@ const ProductDetail = ({item}) => {
         //     console.log('No esta en el carrito')
         // }
 
-        
+        // data.items.forEach(element => {
+        //     if (item.data.titulo === element.item.data.titulo) {
+        //         console.log('el item ya se encuentra')
+        //         console.log(item.data.titulo)
+        //         console.log(element.titulo)
+        //     } else {
+        //         console.log('nada')
+        //         console.log(item.data.titulo)
+        //         console.log(element.item.data.titulo)
+        //     }
+            
+        // });
+
+        // console.log(item.data.titulo)
+        // data.items.forEach(element => {
+        //     console.log(element.item.data.titulo)
+        //     if (element.item.data.titulo == item.data.titulo) {
+        //         console.log('esta en el carrito')
+        //         setData({
+        //             ...data,
+        //             cantidad: data.cantidad + qty,
+        //             items: data.cantidad + qty,
+        //             precioTotal: data.precioTotal + (item.data.pricio * qty)
+        //         })
+        //         alert(`Producto agregado al carrito ${qty}`)
+        //         break
+        //     } else {
+        //         console.log('no esta en el carrio')
+        //         setData({
+        //             ...data,
+        //             cantidad: data.cantidad + qty,
+        //             items: [...data.items, {item: item, cantidad:qty}],
+        //             precioTotal: data.precioTotal + (item.data.pricio * qty)
+        //         })
+        //         alert(`Producto agregado al carrito ${qty}`)
+        //         break
+        //     }
+        // });
 
 
         setData({
@@ -28,7 +65,10 @@ const ProductDetail = ({item}) => {
             precioTotal: data.precioTotal + (item.data.pricio * qty)
         })
         alert(`Producto agregado al carrito ${qty}`)
-        console.log(data)
+
+
+
+        // console.log(data)
         // history.pushState('/cart')
 
         
@@ -77,7 +117,7 @@ const ProductDetail = ({item}) => {
                 <img src={`/img/${item.data.img}`} alt="Imagen Descriptiva"/>
                 <div className="DetailInfo">
                     <p>{item.data.description}</p>
-                    <p>$ {item.data.pricio}</p>
+                    <p>Precio <strong>$ {item.data.pricio}</strong></p>
                     <div className="qty">
                         <button
                             disabled={qty == 1 ? 'disable' : null}
@@ -91,7 +131,7 @@ const ProductDetail = ({item}) => {
                     {/* <button className='btnChartSummit'
                         onClick={add}
                     >AGREGAR</button> */}
-                    <button onClick={handleClickAdd}>Agregar al carrito</button>
+                    <button className="btnAdd" onClick={handleClickAdd}>Agregar al carrito</button>
                 </div>
             </div>
 

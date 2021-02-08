@@ -72,19 +72,19 @@ const Checkout = () => {
 
                         <form onSubmit={handleSubmitForm}>
 
-                            <input type="text" value={formData.nombre} placeholder='Nombre' name='nombre'  onChange={handleChangeInput}/>
-                            <input type="text" placeholder='Apellido' name='apellido'value={formData.apellido} onChange={handleChangeInput}/>
-                            <input type="text" placeholder='E-Mail' name='email' value={formData.email} onChange={handleChangeInput}/>
-                            <input type="tel" placeholder='Cel' name='cel' value={formData.cel} onChange={handleChangeInput}/>
-                            <input type="number" placeholder='Credit-Cart' name='credit' value={formData.credit} onChange={handleChangeInput}/>
-                            <input type="text" placeholder='Fecha de vencimiento' name='vencimiento' value={formData.vencimiento} onChange={handleChangeInput}/>
-                            <input type="number" placeholder='Codigo de seguridad' name='code' value={formData.code} onChange={handleChangeInput}/>
+                            <input type="text" value={formData.nombre} placeholder='Nombre' name='nombre'  onChange={handleChangeInput} required/>
+                            <input type="text" placeholder='Apellido' name='apellido'value={formData.apellido} onChange={handleChangeInput} required/>
+                            <input type="text" placeholder='E-Mail' name='email' value={formData.email} onChange={handleChangeInput} required/>
+                            <input type="tel" placeholder='Cel' name='cel' value={formData.cel} onChange={handleChangeInput} required/>
+                            <input type="number" placeholder='Credit-Cart' name='credit' value={formData.credit} onChange={handleChangeInput} required/>
+                            <input type="text" placeholder='Fecha de vencimiento' name='vencimiento' value={formData.vencimiento} onChange={handleChangeInput} required/>
+                            <input type="number" placeholder='Codigo de seguridad' name='code' value={formData.code} onChange={handleChangeInput} required/>
 
                             <button>PAGAR</button>
                         </form>
                     </div> :
 
-                    <p>LA COMPRA FINALIZO CORRECTAMENTE, N° DE SEGUIMIENTO: {idCompra}</p>
+                    <p>LA COMPRA FINALIZO CORRECTAMENTE, N° DE SEGUIMIENTO: <strong>{idCompra}</strong></p>
                 }
                 
             </div>

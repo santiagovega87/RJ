@@ -1,0 +1,10 @@
+.conteinerFooter {
+    text-align: center;
+    padding: 20px 10px;
+    background: #12EAEA;
+}
+
+.conteinerFooter p {
+    margin: 5px 0px;
+    font-style: oblique;
+}

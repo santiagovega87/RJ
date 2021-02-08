@@ -8,10 +8,12 @@
 }
 
 :root {
-  --color-principal: #096dd7;
-  --color-secundario: #a13ddf;
+  --color-principal: #DB2763;
+  --color-secundario: #12EAEA;
   --blanco: #fff;
   --text: #333;
+  --color-adicional: #7286A0;
+  --color-complementario: #A3BFA8 ;
 }
 
 html {

@@ -27,9 +27,9 @@ const Cart = () => {
                     data.items.map(item => 
                         <li>
                             <h3>Articulo: {item.item.data.titulo}</h3>
-                            <p>Cant: {item.cantidad}</p>
-                            <p>Precio: $ {item.item.data.pricio}</p>
-                            <p>Sub Total: $ {item.cantidad * item.item.data.pricio}</p>
+                            <p>Cant: <strong>{item.cantidad}</strong></p>
+                            <p>Precio: <strong>$ {item.item.data.pricio}</strong></p>
+                            <p>Sub Total: <strong>$ {item.cantidad * item.item.data.pricio}</strong></p>
                         </li>
                             
                         )

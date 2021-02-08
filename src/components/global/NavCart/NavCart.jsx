@@ -15,7 +15,7 @@ const NavCart = ({action, url}) =>{
     return(
         <div className="navCart" onClick={action}>
             <NavLink to={url} activeClassName='active'>CART</NavLink>
-            <span>{data.cantidad}</span>
+            <span><strong>{data.cantidad}</strong></span>
         </div>
 
     )

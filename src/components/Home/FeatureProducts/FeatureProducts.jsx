@@ -113,6 +113,7 @@ const FeatureProducts = () => {
     
     return(
         <section className="featureProducts">
+            <h3>PRODUCTOS DESTACADOS</h3>
             <div>
                 {/*Prueba de cargando*/}
                 {/* {

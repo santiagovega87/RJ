@@ -20,7 +20,14 @@
 }
 
 .DetailInfo {
+    padding: 30px 5px;
+}
 
+.DetailInfo p {
+    padding: 5px 0px;
+}
+.DetailInfo :first-child{
+    text-align: left;
 } 
 
 .DetailConteiner h3 {
@@ -38,6 +45,7 @@
 .DetailConteiner .qty button {
     width: 30px;
     height: 30px;
+    text-align: center;
 }
 
 .DetailConteiner .qty input {
@@ -54,4 +62,18 @@
 .DetailConteiner .detail {
     font-size: 1.5rem;
     color: blue;
+}
+
+.btnAdd {
+    height: 35px;
+    width: 150px;
+    font-size: 1.5rem;
+    border-radius: 17px;
+    border: 1px solid black;
+}
+
+.btnAdd:hover{
+    color: blue;
+    cursor: pointer;
+    
 }

@@ -6,7 +6,10 @@
     padding-top: 15px;
 }
 
-.conteinerCheck {
+.conteinerCheck p{
+
+    margin: 20px 0px;
+    font-size: 2rem;
 
 }
 
@@ -19,13 +22,14 @@
 .ConteinerForm p {
     margin: 10px 0px;
     font-size: 2rem;
-    
+
 }
 
 .ConteinerForm input {
     display: block;
     width: 400px;
     margin-top: 5px;
+    height: 30px;
 }
 
 
@@ -38,5 +42,6 @@
     border-bottom: 1px solid black;
     color: blue;
     background: white;
+    cursor: pointer;
 
 }
